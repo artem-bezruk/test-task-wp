@@ -6,4 +6,4 @@
 4) cd themes/test & composer install
 5) open wp-admin and install woocommerce plugin
 
-View [a link](https://alex-text.dev-test.pro/)
+View [DEMO](https://alex-text.dev-test.pro/)
