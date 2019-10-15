@@ -1,0 +1,164 @@
+.navigation {
+  padding: 1.54rem 0;
+  background-color: #f2f2f2;
+
+  @include MediumDevice {
+    display: none;
+  }
+}
+.navigation-mobile {
+  padding: 1.54rem 0;
+  background-color: #f2f2f2;
+  display: none;
+  @include MediumDevice {
+    display: block;
+  }
+  .nav{
+
+  }
+
+}
+.nav {
+  ul {
+    padding: 0;
+    list-style-type: none;
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+
+    li {
+     margin-right: 30px;
+
+      @include LargeDevices {
+        margin-right: 15px;
+      }
+
+      &.current-menu-item {
+        a {
+          color: $secondary-color;
+
+          &:after {
+            bottom: 0;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.customize a {
+
+        @include MediumDevice {
+          background: transparent;
+          color: $heading-color;
+          padding: 1rem 0;
+          border-radius: 3px;
+          transition: opacity 0.3s ease;
+          opacity: 1;
+
+          &:after {
+            content: '';
+            height: 4px;
+            width: 100%;
+            background-color: $secondary-color;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: bottom 0.3s ease;
+          }
+
+          &:hover {
+            color: $secondary-color;
+
+            &:after {
+              bottom: 0;
+            }
+          }
+
+        }
+
+        background: $secondary-color;
+        color: #fff;
+        padding: 1rem 1.8rem;
+        border-radius: 3px;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+
+      a {
+        position: relative;
+        padding: 1rem 0;
+        font-size: 1.05rem;
+        display: block;
+        overflow: hidden;
+        line-height: 1;
+
+        &:after {
+          content: '';
+          height: 4px;
+          width: 100%;
+          background-color: $secondary-color;
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          transition: bottom 0.3s ease;
+        }
+
+        &:hover {
+          color: $secondary-color;
+
+          &:after {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navigation--search {
+  .search-submit {
+    display: none;
+  }
+
+  .search {
+    position: relative;
+    &:before {
+      content: '';
+      width: 0;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $secondary-color;
+      transition: width 0.3s ease;
+    }
+    &:focus-within {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  .search-input {
+    border: 0;
+    width: 100%;
+    padding: 0.7rem 0;
+    color: $text-secondary-color;
+    border-bottom: 4px solid $text-secondary-color;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

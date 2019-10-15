@@ -1,0 +1,43 @@
+body {
+  font-family: 'mont';
+  font-size: 17px;
+  color: $text-color;
+  font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $heading-color;
+}
+
+h2 {
+  font-size: 1.52rem;
+}
+
+.container {
+  max-width: 73.23rem;
+}
+
+.site-name {
+  color: #fff;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+a {
+  color: $heading-color;
+  transition: color 0.3s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}

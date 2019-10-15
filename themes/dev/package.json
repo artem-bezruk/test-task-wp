@@ -1,0 +1,27 @@
+{
+  "name": "meblitex",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "aos": "^2.3.4",
+    "del": "^5.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "node-normalize-scss": "^8.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-modernizr": "^3.3.0"
+  }
+}

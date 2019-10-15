@@ -1,0 +1,199 @@
+.home--slider {
+  position: relative;
+
+  @include MediumDevice {
+    margin-top: 30px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 4.41rem);
+    width: 100%;
+    background: #f2f2f2;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .slider-nav {
+    position: absolute;
+    right: calc(2.94rem + 0.88rem); // +0.83rem (15px) with bootstrap padding
+    bottom: 2.94rem;
+    @include CustomSize(1024) {
+      right: calc(1.5rem + 0.99rem);
+      bottom: 1.5rem;
+    }
+
+    span {
+      display: inline-block!important; // !important fix for JS inline style from Slider lib
+      padding: 1.05rem 1.75rem;
+      background: #24964d;
+      color: #fff;
+      vertical-align: middle;
+      line-height: 1;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.slide--wrap {
+  display: flex;
+
+  @include SmallDevices {
+    flex-wrap: wrap;
+  }
+
+  .slide--description {
+    padding: 2.94rem;
+    background-color: $main-color;
+    display: flex;
+    flex-wrap: wrap;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    @include CustomSize(1024) {
+      padding: 1.5rem;
+    }
+
+
+    @include SmallDevices {
+      width: 100%;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 0;
+    }
+
+    h1 {
+      font-size: 1.88rem;
+      color: #fff;
+      margin-top: 2.35rem;
+      @include CustomSize(1080) {
+        font-size: 1.4rem;
+      }
+
+      @include SmallDevices {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+      }
+    }
+    .slide--event-day {
+      position: relative;
+      color: $text-hover;
+      padding-left: 1.76rem;
+      line-height: 1;
+
+      &:before {
+        content: '';
+        background-image: url("../img/icon.png");
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    a {
+      align-self: flex-end;
+      padding: 1.17rem 2.05rem;
+      color: #fff;
+      background-color: $secondary-color;
+      opacity: 1;
+      line-height: 1;
+      border-radius: 3px;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  img {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    object-fit: cover;
+
+    @include SmallDevices {
+      width: 100%;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 5px;
+    }
+  }
+}
+
+.home--content {
+  margin: 3.82rem 0 5.29rem;
+
+  .news--date {
+    font-size: 0.94rem;
+    color: $text-secondary-color;
+  }
+
+  a:hover {
+    color: #000;
+  }
+
+  h2 {
+    font-size: 1.52rem;
+    margin-bottom: 2.84rem;
+
+    @include MediumDevice {
+      width: 100%;
+    }
+  }
+  .news--item{
+    margin-bottom: 2.84rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include MediumDevice {
+      display: block;
+      width: 50%;
+      float: left;
+      margin: 0;
+      text-align: center;
+    }
+
+    @include SmallDevices {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+  .home--about-wrap {
+    position: relative;
+
+    @include MediumDevice {
+      margin-bottom: 30px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0.89rem;
+      height: 4px;
+      width: 4.7rem;
+      background-color: $secondary-color;
+    }
+  }
+
+}

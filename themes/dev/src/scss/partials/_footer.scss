@@ -1,0 +1,17 @@
+.footer {
+  padding: 5.5rem 0;
+  display: block;
+  width: 100%;
+  background-color: $main-color;
+
+  .footer--logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
